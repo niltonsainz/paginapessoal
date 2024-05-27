@@ -26,17 +26,27 @@ st.markdown(
         justify-content: space-between;
         align-items: center;
     }
-    .container img {
-        margin-left: 20px;
-        width: 150px;
-    }
     </style>
     """,
     unsafe_allow_html=True
 )
 
 # Conteúdo da página inicial
-st.markdown('<div class="container"><div><div class="title">Nilton Sainz</div><div class="subtitle">Cientista Político</div><div class="university">Universidade Federal do Paraná</div></div><img src="Foto_NiltonSainz.png"></div>', unsafe_allow_html=True)
+st.markdown(
+    '''
+    <div class="container">
+        <div>
+            <div class="title">Nilton Sainz</div>
+            <div class="subtitle">Cientista Político</div>
+            <div class="university">Universidade Federal do Paraná</div>
+        </div>
+    </div>
+    ''',
+    unsafe_allow_html=True
+)
+
+# Exibir a imagem usando st.image()
+st.image("Foto_NiltonSainz.png", width=150)
 
 # Barra de navegação com opções
 selected = option_menu(
