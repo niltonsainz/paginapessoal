@@ -113,7 +113,7 @@ elif selected == "Projetos":
     O projeto de pesquisa é vinculado a minha tese de doutoramento em Ciência Política no PPGCP/UFPR, sob orientação do Prof. Adriano Codato. O objetivo da pesquisa
     é compreender as escolhas de carreiras em um estudo de coorte nos quatro países, comparando os efeitos de seus sistemas políticos
     e o perfil político-social de suas elites parlamentares sobre os padrões de carreira e ambição política de deputados nacionais.
-    """)
+    """, unsafe_allow_html=True)
     
 elif selected == "Produção Acadêmica":
     st.write("Aqui está a minha produção acadêmica:")
