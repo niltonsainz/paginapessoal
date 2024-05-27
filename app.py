@@ -37,10 +37,18 @@ st.markdown(
     .fa {
         margin-right: 10px;
     }
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .contact-item {
+        margin: 10px;
+        text-align: center;
+    }
     .contact-button {
         display: inline-block;
         padding: 10px 20px;
-        margin: 5px;
         color: white;
         background-color: #444;
         text-align: center;
