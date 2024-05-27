@@ -202,8 +202,8 @@ if selected == "Contato":
     <div>
         <a href="https://www.linkedin.com/in/nilton-sainz/" target="_blank" class="contact-button"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/niltonsainz" target="_blank" class="contact-button"><i class="fab fa-github"></i></a>
-        <a href="mailto:sainznilton@gmail.com" target="_blank" class="contact-button"><i class="fa-brands fa-google"></i></a>
-        <a href="http://lattes.cnpq.br/7733003139844460" target="_blank" class="contact-button"><i class="fa-solid fa-id-card"></i></a>
-        <a href="https://www.researchgate.net/profile/Nilton-Sainz" target="_blank" class="contact-button"><i class="fa-brands fa-researchgate"></i></a>
+        <a href="mailto:sainznilton@gmail.com" target="_blank" class="contact-button"><i class="fab fa-google"></i></a>
+        <a href="http://lattes.cnpq.br/7733003139844460" target="_blank" class="contact-button"><i class="far fa-id-card"></i></a>
+        <a href="https://www.researchgate.net/profile/Nilton-Sainz" target="_blank" class="contact-button"><i class="fab fa-researchgate"></i></a>
     </div>
     """, unsafe_allow_html=True)
