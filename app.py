@@ -26,9 +26,13 @@ st.markdown(
         justify-content: space-between;
         align-items: center;
     }
+    .container .text {
+        flex: 1;
+    }
     .container img {
         margin-left: 20px;
         width: 300px;  /* Aumenta o tamanho da imagem */
+        height: auto;
     }
     </style>
     """,
@@ -39,24 +43,22 @@ st.markdown(
 st.markdown(
     '''
     <div class="container">
-        <div>
+        <div class="text">
             <div class="title">Nilton Sainz</div>
             <div class="subtitle">Cientista Político</div>
             <div class="university">Universidade Federal do Paraná</div>
         </div>
+        <img src="image.png" alt="Foto de Nilton Sainz">
     </div>
     ''',
     unsafe_allow_html=True
 )
 
-# Exibir a imagem usando st.image()
-st.image("Foto_NiltonSainz.png", width=300, caption="Foto de Nilton Sainz")
-
 # Barra de navegação com opções
 selected = option_menu(
     menu_title=None,  # Menu sem título
     options=["Apresentação", "Projetos", "Produção Acadêmica", "Contato"],  # Opções de navegação
-    icons=["house", "briefcase", "book", "envelope"],  # Ícones para cada opção
+    icons=["person", "briefcase", "book", "envelope"],  # Ícones para cada opção
     menu_icon="cast",  # Ícone do menu
     default_index=0,  # Índice padrão
     orientation="horizontal",
