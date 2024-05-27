@@ -205,32 +205,32 @@ elif selected == "Produção Acadêmica":
 
 if selected == "Contato":
     st.markdown("""
-    <div style="text-align: center;">
-        <div>
+    <div class="contact-container">
+        <div class="contact-item">
             <a href="https://www.linkedin.com/in/nilton-sainz/" target="_blank" class="contact-button">
                 <i class="fab fa-linkedin"></i>
             </a>
             <span class="contact-text">LinkedIn</span>
         </div>
-        <div>
+        <div class="contact-item">
             <a href="https://github.com/niltonsainz" target="_blank" class="contact-button">
                 <i class="fab fa-github"></i>
             </a>
             <span class="contact-text">GitHub</span>
         </div>
-        <div>
+        <div class="contact-item">
             <a href="mailto:sainznilton@gmail.com" target="_blank" class="contact-button">
                 <i class="fab fa-google"></i>
             </a>
             <span class="contact-text">E-mail</span>
         </div>
-        <div>
+        <div class="contact-item">
             <a href="http://lattes.cnpq.br/7733003139844460" target="_blank" class="contact-button">
                 <i class="far fa-id-card"></i>
             </a>
             <span class="contact-text">Lattes</span>
         </div>
-        <div>
+        <div class="contact-item">
             <a href="https://www.researchgate.net/profile/Nilton-Sainz" target="_blank" class="contact-button">
                 <i class="fab fa-researchgate"></i>
             </a>
