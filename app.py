@@ -57,7 +57,7 @@ selected = option_menu(
     styles={
         "container": {"padding": "0!important", "background-color": "black"},
         "icon": {"color": "white", "font-size": "25px"},
-        "nav-link": {"font-size": "20px", "text-align": "center", "margin": "0px", "--hover-color": "#333"},
+        "nav-link": {"font-size": "20px", "text-align": "center", "margin": "0px", "--hover-color": "#333", "color": "white"},
         "nav-link-selected": {"background-color": "#444", "color": "white"},
     }
 )
@@ -125,7 +125,7 @@ elif selected == "Produção Acadêmica":
         color: #CCCCCC; /* Ajuste se necessário para maior contraste */
     }
     </style>
-    ## Publicações recentes e destaques:
+    ## Artigos em periódicos:
     """, unsafe_allow_html=True)
 
     production = [
@@ -162,7 +162,7 @@ elif selected == "Produção Acadêmica":
         {
             "title": "Um município 'Diárquico'? A atuação dos partidos políticos políticos no Legislativo de Rio Grande - RS no final da ditadura civil-militar",
             "publication": "Teoria e Pesquisa (UFSCAR)",
-            "authors": "Nilton Sainz, Rafael Alexandre Silveira e Carlos Arthur Gallo",
+            "authors": "Alvaro Barreto e Nilton Sainz",
             "link": "https://www.teoriaepesquisa.ufscar.br/index.php/tp/article/view/757"
         },
         {
@@ -180,8 +180,12 @@ elif selected == "Produção Acadêmica":
 
 
 elif selected == "Contato":
-    st.write("Entre em contato comigo através das plataformas abaixo:")
-    st.write("- [LinkedIn](https://www.linkedin.com/in/nilton-sainz/)")
-    st.write("- [GitHub](https://github.com/niltonsainz)")
-    st.write("- [E-mail](mailto:sainznilton@gmail.com)")
-    st.write("- [Lattes](http://lattes.cnpq.br/7733003139844460)")
+    st.markdown("""
+    <div>
+        <a href="https://www.linkedin.com/in/nilton-sainz/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a><br>
+        <a href="https://github.com/niltonsainz" target="_blank"><i class="fab fa-github"></i>GitHub</a><br>
+        <a href="mailto:sainznilton@gmail.com" target="_blank"><i class="fa-brands fa-google"></i>E-mail</a><br>
+        <a href="http://lattes.cnpq.br/7733003139844460" target="_blank"><i class="fa-solid fa-id-card"></i>Lattes</a><br>
+        <a href="https://www.researchgate.net/profile/Nilton-Sainz" target="_blank"><i class="fa-brands fa-researchgate"></i>ResearchGate</a>
+    </div>
+    """, unsafe_allow_html=True)
