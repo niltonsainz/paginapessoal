@@ -44,17 +44,19 @@ st.markdown(
             <div class="subtitle">Cientista Político</div>
             <div class="university">Universidade Federal do Paraná</div>
         </div>
-        <img src="Foto_NiltonSainz.png" alt="Foto de Nilton Sainz">
     </div>
     ''',
     unsafe_allow_html=True
 )
 
+# Exibir a imagem usando st.image()
+st.image("Foto_NiltonSainz.png", width=300, caption="Foto de Nilton Sainz")
+
 # Barra de navegação com opções
 selected = option_menu(
     menu_title=None,  # Menu sem título
     options=["Apresentação", "Projetos", "Produção Acadêmica", "Contato"],  # Opções de navegação
-    icons=["house", "work", "science", "envelope"],  # Ícones para cada opção
+    icons=["house", "briefcase", "book", "envelope"],  # Ícones para cada opção
     menu_icon="cast",  # Ícone do menu
     default_index=0,  # Índice padrão
     orientation="horizontal",
@@ -67,19 +69,8 @@ selected = option_menu(
 )
 
 # Conteúdo das abas
-if selected == "Home":
-    st.write("Bem-vindo à página inicial!")
-elif selected == "Notícias":
-    st.write("Aqui estão as últimas notícias:")
-    # Exemplo de esteira de notícias
-    news = [
-        "Notícia 1: Detalhe da notícia 1.",
-        "Notícia 2: Detalhe da notícia 2.",
-        "Notícia 3: Detalhe da notícia 3.",
-        "Notícia 4: Detalhe da notícia 4.",
-    ]
-    for item in news:
-        st.write(item)
+if selected == "Apresentação":
+    st.write("Bem-vindo à página de apresentação!")
 elif selected == "Projetos":
     st.write("Aqui estão os meus projetos:")
     projects = [
@@ -89,9 +80,18 @@ elif selected == "Projetos":
     ]
     for project in projects:
         st.write(project)
+elif selected == "Produção Acadêmica":
+    st.write("Aqui está a minha produção acadêmica:")
+    production = [
+        "Produção 1: Descrição da produção 1.",
+        "Produção 2: Descrição da produção 2.",
+        "Produção 3: Descrição da produção 3.",
+    ]
+    for item in production:
+        st.write(item)
 elif selected == "Contato":
     st.write("Entre em contato comigo através das plataformas abaixo:")
     st.write("- [LinkedIn](https://www.linkedin.com/in/nilton-sainz/)")
     st.write("- [GitHub](https://github.com/niltonsainz)")
-    st.write("- [E-mail](sainznilton@gmail.com)")
+    st.write("- [E-mail](mailto:sainznilton@gmail.com)")
     st.write("- [Lattes](http://lattes.cnpq.br/7733003139844460)")
