@@ -30,27 +30,12 @@ st.markdown(
         flex: 1;
     }
     .container img {
-        margin-left: 20px;
-        width: 300px;  /* Aumenta o tamanho da imagem */
+        margin-left: 30px;
+        width: 350px;  /* Aumenta o tamanho da imagem */
         height: auto;
     }
     </style>
     """,
-    unsafe_allow_html=True
-)
-
-# Conteúdo da página inicial
-st.markdown(
-    '''
-    <div class="container">
-        <div class="text">
-            <div class="title">Nilton Sainz</div>
-            <div class="subtitle">Cientista Político</div>
-            <div class="university">Universidade Federal do Paraná</div>
-        </div>
-        <img src="image.png" alt="Foto de Nilton Sainz">
-    </div>
-    ''',
     unsafe_allow_html=True
 )
 
@@ -59,7 +44,7 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.markdown('<div class="text"><div class="title">Nilton Sainz</div><div class="subtitle">Cientista Político</div><div class="university">Universidade Federal do Paraná</div></div>', unsafe_allow_html=True)
 with col2:
-    st.image("image.png", caption="Foto de Nilton Sainz", use_column_width=True)
+    st.image("image.png", use_column_width=True)
 
 # Barra de navegação com opções
 selected = option_menu(
