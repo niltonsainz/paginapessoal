@@ -33,6 +33,23 @@ st.markdown(
         margin-left: 60px;
         width: 500px;  /* Aumenta o tamanho da imagem */
         height: auto;
+   }
+    .fa {
+        margin-right: 10px;
+    }
+    .contact-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        color: white;
+        background-color: #444;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .contact-button:hover {
+        background-color: #555;
     }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -180,13 +197,13 @@ elif selected == "Produção Acadêmica":
         st.markdown(f"<a class='publication-details' href='{item['link']}' target='_blank'>Acesse a publicação</a>", unsafe_allow_html=True)
 
 
-elif selected == "Contato":
+if selected == "Contato":
     st.markdown("""
     <div>
-        <a href="https://www.linkedin.com/in/nilton-sainz/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a><br>
-        <a href="https://github.com/niltonsainz" target="_blank"><i class="fab fa-github"></i>GitHub</a><br>
-        <a href="mailto:sainznilton@gmail.com" target="_blank"><i class="fa-brands fa-google"></i>E-mail</a><br>
-        <a href="http://lattes.cnpq.br/7733003139844460" target="_blank"><i class="fa-solid fa-id-card"></i>Lattes</a><br>
-        <a href="https://www.researchgate.net/profile/Nilton-Sainz" target="_blank"><i class="fa-brands fa-researchgate"></i>ResearchGate</a>
+        <a href="https://www.linkedin.com/in/nilton-sainz/" target="_blank" class="contact-button"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/niltonsainz" target="_blank" class="contact-button"><i class="fab fa-github"></i></a>
+        <a href="mailto:sainznilton@gmail.com" target="_blank" class="contact-button"><i class="fa-brands fa-google"></i></a>
+        <a href="http://lattes.cnpq.br/7733003139844460" target="_blank" class="contact-button"><i class="fa-solid fa-id-card"></i></a>
+        <a href="https://www.researchgate.net/profile/Nilton-Sainz" target="_blank" class="contact-button"><i class="fa-brands fa-researchgate"></i></a>
     </div>
     """, unsafe_allow_html=True)
