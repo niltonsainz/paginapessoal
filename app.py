@@ -84,6 +84,11 @@ if selected == "Apresentação":
     """)
 elif selected == "Projetos":
     st.markdown("""
+    <style>
+    h2, h3 {
+        color: white;
+    }
+    </style>
     ## Projetos atuais:
 
     ### Portal da Classe Política - INCT ReDem
