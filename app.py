@@ -72,8 +72,8 @@ if selected == "Apresentação":
     onde também atuo como pesquisador. Sou graduado em Ciências Sociais e mestre em Ciência Política pela Universidade
     Federal de Pelotas.
 
-    Sou pesquisador vinculado ao [Instituto Nacional de Ciência Tecnologia - Representação e Legitimidade Democrática (INCT-ReDem)](https://redem.tec.br/)
-    e ao [Núcleo de Pesquisa em Políticas Públicas e Desenvolvimento Humano da PUCPR (NUPED)](https://www.nuped.com.br/).
+    Sou pesquisador vinculado ao Instituto Nacional de Ciência Tecnologia - Representação e Legitimidade Democrática [(INCT-ReDem)](https://redem.tec.br/)
+    e ao Núcleo de Pesquisa em Políticas Públicas e Desenvolvimento Humano da PUCPR [(NUPED)](https://www.nuped.com.br/).
     
     Meus interesses de pesquisa são elites parlamentares, carreiras políticas, eleições e poder Legislativo 
     e metodologia de pesquisa em Ciência Política e Sociais. Também possuo interesse nas áreas de regulação de novas técnicas
