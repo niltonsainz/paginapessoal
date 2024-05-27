@@ -55,10 +55,10 @@ selected = option_menu(
     default_index=0,  # Índice padrão
     orientation="horizontal",
     styles={
-        "container": {"padding": "0!important", "background-color": "#EEEEEE"},
+        "container": {"padding": "0!important", "background-color": "black"},
         "icon": {"color": "white", "font-size": "25px"},
-        "nav-link": {"font-size": "20px", "text-align": "center", "margin": "0px", "--hover-color": "#EEEEEE"},
-        "nav-link-selected": {"background-color": "#333"},
+        "nav-link": {"font-size": "20px", "text-align": "center", "margin": "0px", "--hover-color": "#333"},
+        "nav-link-selected": {"background-color": "#444", "color": "white"},
     }
 )
 
