@@ -51,6 +51,12 @@ st.markdown(
     .contact-button:hover {
         background-color: #555;
     }
+    .contact-text {
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 14px;
+    }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     """,
@@ -199,11 +205,36 @@ elif selected == "Produção Acadêmica":
 
 if selected == "Contato":
     st.markdown("""
-    <div>
-        <a href="https://www.linkedin.com/in/nilton-sainz/" target="_blank" class="contact-button"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/niltonsainz" target="_blank" class="contact-button"><i class="fab fa-github"></i></a>
-        <a href="mailto:sainznilton@gmail.com" target="_blank" class="contact-button"><i class="fab fa-google"></i></a>
-        <a href="http://lattes.cnpq.br/7733003139844460" target="_blank" class="contact-button"><i class="far fa-id-card"></i></a>
-        <a href="https://www.researchgate.net/profile/Nilton-Sainz" target="_blank" class="contact-button"><i class="fab fa-researchgate"></i></a>
+    <div style="text-align: center;">
+        <div>
+            <a href="https://www.linkedin.com/in/nilton-sainz/" target="_blank" class="contact-button">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <span class="contact-text">LinkedIn</span>
+        </div>
+        <div>
+            <a href="https://github.com/niltonsainz" target="_blank" class="contact-button">
+                <i class="fab fa-github"></i>
+            </a>
+            <span class="contact-text">GitHub</span>
+        </div>
+        <div>
+            <a href="mailto:sainznilton@gmail.com" target="_blank" class="contact-button">
+                <i class="fab fa-google"></i>
+            </a>
+            <span class="contact-text">E-mail</span>
+        </div>
+        <div>
+            <a href="http://lattes.cnpq.br/7733003139844460" target="_blank" class="contact-button">
+                <i class="far fa-id-card"></i>
+            </a>
+            <span class="contact-text">Lattes</span>
+        </div>
+        <div>
+            <a href="https://www.researchgate.net/profile/Nilton-Sainz" target="_blank" class="contact-button">
+                <i class="fab fa-researchgate"></i>
+            </a>
+            <span class="contact-text">ResearchGate</span>
+        </div>
     </div>
     """, unsafe_allow_html=True)
