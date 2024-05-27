@@ -55,10 +55,10 @@ selected = option_menu(
     default_index=0,  # Índice padrão
     orientation="horizontal",
     styles={
-        "container": {"padding": "0!important", "background-color": "black"},
+        "container": {"padding": "0!important", "background-color": "white"},
         "icon": {"color": "white", "font-size": "25px"},
-        "nav-link": {"font-size": "20px", "text-align": "center", "margin": "0px", "--hover-color": "#333"},
-        "nav-link-selected": {"background-color": "#444"},
+        "nav-link": {"font-size": "20px", "text-align": "center", "margin": "0px", "--hover-color": "#EEEEEE"},
+        "nav-link-selected": {"background-color": "#EEEEEE"},
     }
 )
 
@@ -116,14 +116,28 @@ elif selected == "Projetos":
     """, unsafe_allow_html=True)
     
 elif selected == "Produção Acadêmica":
-    st.write("Aqui está a minha produção acadêmica:")
+    st.markdown("## Publicações recentes e destaques:")
     production = [
-        "Produção 1: Descrição da produção 1.",
-        "Produção 2: Descrição da produção 2.",
-        "Produção 3: Descrição da produção 3.",
+        {
+            "title": "Separate Tables: Thematic and Methodological Divisions in Brazilian Political Science",
+            "publication": "Brazilian Political Science Review",
+            "Authors": "Nilton Sainz, Adriano Codato, Rodrigo da Silva e Augusto Clemente",
+            "link": "https://www.scielo.br/j/bpsr/a/56fP9Qpfs7Vjf7JHKt5mP8j/?lang=en"
+        },
+        {
+            "title": "Artigo ABC",
+            "publication": "publicado no periódico Y",
+            "link": "https://link-do-artigo-2.com"
+        },
+        {
+            "title": "Artigo DEF",
+            "publication": "publicado no periódico Z",
+            "link": "https://link-do-artigo-3.com"
+        }
     ]
     for item in production:
-        st.write(item)
+        st.markdown(f"[{item['title']}, {item['publication']}]({item['link']})")
+
 elif selected == "Contato":
     st.write("Entre em contato comigo através das plataformas abaixo:")
     st.write("- [LinkedIn](https://www.linkedin.com/in/nilton-sainz/)")
