@@ -26,6 +26,10 @@ st.markdown(
         justify-content: space-between;
         align-items: center;
     }
+    .container img {
+        margin-left: 20px;
+        width: 300px;  /* Aumenta o tamanho da imagem */
+    }
     </style>
     """,
     unsafe_allow_html=True
@@ -40,19 +44,17 @@ st.markdown(
             <div class="subtitle">Cientista Político</div>
             <div class="university">Universidade Federal do Paraná</div>
         </div>
+        <img src="Foto_NiltonSainz.png" alt="Foto de Nilton Sainz">
     </div>
     ''',
     unsafe_allow_html=True
 )
 
-# Exibir a imagem usando st.image()
-st.image("Foto_NiltonSainz.png", width=150)
-
 # Barra de navegação com opções
 selected = option_menu(
     menu_title=None,  # Menu sem título
-    options=["Home", "Notícias", "Projetos", "Contato"],  # Opções de navegação
-    icons=["house", "newspaper", "briefcase", "envelope"],  # Ícones para cada opção
+    options=["Apresentação", "Projetos", "Produção Acadêmica", "Contato"],  # Opções de navegação
+    icons=["house", "work", "science", "envelope"],  # Ícones para cada opção
     menu_icon="cast",  # Ícone do menu
     default_index=0,  # Índice padrão
     orientation="horizontal",
@@ -89,6 +91,7 @@ elif selected == "Projetos":
         st.write(project)
 elif selected == "Contato":
     st.write("Entre em contato comigo através das plataformas abaixo:")
-    st.write("- [LinkedIn](https://www.linkedin.com/in/seu-perfil)")
-    st.write("- [GitHub](https://github.com/seu-usuario)")
+    st.write("- [LinkedIn](https://www.linkedin.com/in/nilton-sainz/)")
+    st.write("- [GitHub](https://github.com/niltonsainz)")
     st.write("- [E-mail](sainznilton@gmail.com)")
+    st.write("- [Lattes](http://lattes.cnpq.br/7733003139844460)")
