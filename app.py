@@ -1,6 +1,14 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+# Inclui a folha de estilo do FontAwesome
+st.markdown(
+    """
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    """,
+    unsafe_allow_html=True
+)
+
 # Define a cor de fundo preta e letras brancas usando CSS
 st.markdown(
     """
@@ -31,9 +39,9 @@ st.markdown(
     }
     .container img {
         margin-left: 60px;
-        width: 500px;  /* Aumenta o tamanho da imagem */
+        width: 350px;
         height: auto;
-   }
+    }
     .fa {
         margin-right: 10px;
     }
@@ -65,8 +73,36 @@ st.markdown(
         margin-top: 5px;
         font-size: 14px;
     }
+    .skills-title {
+        color: #EEEEEE;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .skills-subtitle {
+        color: #DDDDDD;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .skills-list {
+        color: #CCCCCC;
+        font-size: 18px;
+    }
+    .skills-list li {
+        margin-bottom: 8px;
+    }
+    .logos-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .logos-container img {
+        margin: 0 20px;
+        width: 100px;
+        height: auto;
+    }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     """,
     unsafe_allow_html=True
 )
@@ -76,13 +112,13 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.markdown('<div class="text"><div class="title">Nilton Sainz</div><div class="subtitle">Cientista Político</div><div class="university">Universidade Federal do Paraná</div></div>', unsafe_allow_html=True)
 with col2:
-    st.image("image.png", use_column_width=True)
+    st.image("image.png", width=400)  # Corrigir para usar st.image
 
 # Barra de navegação com opções
 selected = option_menu(
     menu_title=None,  # Menu sem título
-    options=["Apresentação", "Projetos", "Produção Acadêmica", "Contato"],  # Opções de navegação
-    icons=["person", "briefcase", "book", "envelope"],  # Ícones para cada opção
+    options=["Apresentação", "Projetos", "Produção Acadêmica", "Habilidades técnicas", "Contato"],  # Opções de navegação
+    icons=["person", "briefcase", "book", "tools", "envelope"],  # Usar "tools" para Habilidades técnicas
     menu_icon="cast",  # Ícone do menu
     default_index=0,  # Índice padrão
     orientation="horizontal",
@@ -210,8 +246,59 @@ elif selected == "Produção Acadêmica":
         st.markdown(f"<p class='publication-details'><strong>Autores:</strong> {item['authors']}</p>", unsafe_allow_html=True)
         st.markdown(f"<a class='publication-details' href='{item['link']}' target='_blank'>Acesse a publicação</a>", unsafe_allow_html=True)
 
+elif selected == "Habilidades técnicas":
+    st.markdown("## Habilidades Técnicas")
 
-if selected == "Contato":
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown("<div style='color: white; font-size: 20px; font-weight: bold;'>Pesquisa e metodologia</div>", unsafe_allow_html=True)
+        st.write("""
+        - Estudos eleitorais, análises institucionais e políticas públicas
+        - Análise de redes sociais
+        - Bibliometria e cientometria
+        - Jurimetria
+        - Metodologia quantitativa de pesquisa
+        - Metodologia qualitativa de pesquisa
+        """)
+
+    with col2:
+        st.markdown("<div style='color: white; font-size: 20px; font-weight: bold;'>Técnicas de análises</div>", unsafe_allow_html=True)
+        st.write("""
+        - Estatística descritiva e inferencial
+        - Estatística multivariada
+        - Modelagem estatística supervisionada
+        - Reconhecimento de padrões e análise de clusters
+        - Análise espacial
+        - Machine Learning
+        - Mineração de texto
+        - Análise de conteúdo computacional
+        """)
+
+    with col3:
+        st.markdown("<div style='color: white; font-size: 20px; font-weight: bold;'>Softwares e bibliotecas</div>", unsafe_allow_html=True)
+        st.write("""
+        - R e RStudio
+        - Python e VSCode
+        - SPSS
+        - Jamovi
+        - Jasp
+        - VOSviewer
+        - Gephi
+        - Iramuteq
+        """)
+
+    st.markdown("<div style='color: white; font-size: 20px; font-weight: bold;'>Logos</div>", unsafe_allow_html=True)
+    logo_urls = [
+        "https://www.r-project.org/logo/Rlogo.png",
+        "https://logowik.com/content/uploads/images/python.jpg",
+        "https://seeklogo.com/images/S/SPSS-logo-32F23C8B51-seeklogo.com.png"
+    ]
+    cols = st.columns(len(logo_urls))
+    for col, url in zip(cols, logo_urls):
+        col.image(url, use_column_width=True)
+
+elif selected == "Contato":
     st.markdown("""
     <div class="contact-container">
         <div class="contact-item">
