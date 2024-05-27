@@ -83,14 +83,33 @@ if selected == "Apresentação":
     assessoria e consultoria em pesquisas científicas.
     """)
 elif selected == "Projetos":
-    st.write("Aqui estão os meus projetos:")
-    projects = [
-        "Projeto 1: Descrição do projeto 1.",
-        "Projeto 2: Descrição do projeto 2.",
-        "Projeto 3: Descrição do projeto 3.",
-    ]
-    for project in projects:
-        st.write(project)
+    st.markdown("""
+    ## Projetos atuais:
+
+    ### Portal da Classe Política - INCT ReDem
+    O projeto que tem como objetivo principal unificar os conjuntos de dados disponibilizados pelo TSE em uma plataforma online e intuitiva. A ambição do portal é tornar acessível 
+    o acesso e a visualização de dados eleitorais e indicadores políticos a partir do amplo conjunto de informações agregadas do TSE desde 1998 até os dias atuais. Dessa forma, será possível
+    dar mais transparência e divulgação as informações sobre a classe política, tornando acessível tanto para a população como também para pesquisadores que possuem o interesse em investigar 
+    as dinâmicas eleitorais brasileiras. Atuo na coordenação do projeto junto ao Prof. Adriano Codato, coordenador do INCT ReDem.
+    Para mais informações em [Portal da Classe Política](https://redem.tec.br/portal-da-classe-politica-2/)
+    
+    ### Enchentes no Extremo Sul do Rio Grande do Sul: monitor do nível da lagoa dos patos em Rio Grande-RS
+    Criação do aplicativo de monitoramento do nível da Lagoa dos Patos no município de Rio Grande. O aplicativo foi desenvolvido durante as enchentes em maio de 2024 no Estado do Rio Grande do Sul 
+    com o objetivo de ampliar o acesso à informação na região Sul do Estado. É possível os visualizar dados atualizados a cada 10 minutos. Os dados são extraídos e tratados por meio da plataforma RG Pilots 
+    (Praticagem da Barra) a partir da tábua de maré. Acesse o [aplicativo](https://nivel-lagoa-rg-db04b6ffad2c.herokuapp.com/)
+
+    ### Observatório dos neurodireitos
+    O projeto visa gerar um panorama compreensivo sobre o estado atual dos neurodireitos no Brasil com a criação do "Observatório dos Neurodireitos", 
+    promovendo o Paraná como um polo acadêmico-científico. A proposta implica acompanhamento, sugestões e críticas às proposições legislativas infraconstitucionais em nível nacional e estadual.
+    Utilizando métodos mistos e a triangulação de dados, o projeto combina análise bibliométrica da literatura acadêmica, análise de conteúdo de jurisprudência em tribunais 
+    e o monitoramento legislativo de projetos de lei relacionados aos neurodireitos. O projeto conta com a coordenação e orientação do Prof. Emerson Gabardo.
+
+    ### Carreira e ambição política na América Latina: os casos de Argentina, Brasil, Chile e México
+    O projeto de pesquisa é vinculado a minha tese de doutoramento em Ciência Política no PPGCP/UFPR, sob orientação do Prof. Adriano Codato. O objetivo da pesquisa
+    é compreender as escolhas de carreiras em um estudo de coorte nos quatro países, comparando os efeitos de seus sistemas políticos
+    e o perfil político-social de suas elites parlamentares sobre os padrões de carreira e ambição política de deputados nacionais.
+    """)
+    
 elif selected == "Produção Acadêmica":
     st.write("Aqui está a minha produção acadêmica:")
     production = [
