@@ -247,7 +247,7 @@ elif selected == "Produção Acadêmica":
         st.markdown(f"<a class='publication-details' href='{item['link']}' target='_blank'>Acesse a publicação</a>", unsafe_allow_html=True)
 
 elif selected == "Habilidades técnicas":
-    st.markdown("## Habilidades Técnicas")
+    st.markdown("## ")
 
     col1, col2, col3 = st.columns(3)
 
@@ -288,7 +288,7 @@ elif selected == "Habilidades técnicas":
         - Iramuteq
         """)
 
-    st.markdown("<div style='color: white; font-size: 20px; font-weight: bold;'>Logos</div>", unsafe_allow_html=True)
+    st.markdown("<div style='color: white; font-size: 20px; font-weight: bold;'</div>", unsafe_allow_html=True)
     logo_urls = [
         "https://www.r-project.org/logo/Rlogo.png",
         "https://logowik.com/content/uploads/images/python.jpg",
