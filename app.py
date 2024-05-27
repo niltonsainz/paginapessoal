@@ -30,8 +30,8 @@ st.markdown(
         flex: 1;
     }
     .container img {
-        margin-left: 30px;
-        width: 350px;  /* Aumenta o tamanho da imagem */
+        margin-left: 60px;
+        width: 500px;  /* Aumenta o tamanho da imagem */
         height: auto;
     }
     </style>
