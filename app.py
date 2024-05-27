@@ -55,7 +55,7 @@ selected = option_menu(
     default_index=0,  # Índice padrão
     orientation="horizontal",
     styles={
-        "container": {"padding": "0!important", "background-color": "black"},
+        "container": {"padding": "0!important", "background-color": "#EEEEEE"},
         "icon": {"color": "white", "font-size": "25px"},
         "nav-link": {"font-size": "20px", "text-align": "center", "margin": "0px", "--hover-color": "#EEEEEE"},
         "nav-link-selected": {"background-color": "#333"},
@@ -116,7 +116,18 @@ elif selected == "Projetos":
     """, unsafe_allow_html=True)
     
 elif selected == "Produção Acadêmica":
-    st.markdown("## Publicações recentes e destaques:")
+    st.markdown("""
+    <style>
+    .publication-title {
+        color: #EEEEEE;
+    }
+    .publication-details {
+        color: #CCCCCC; /* Ajuste se necessário para maior contraste */
+    }
+    </style>
+    ## Publicações recentes e destaques:
+    """, unsafe_allow_html=True)
+
     production = [
         {
             "title": "Separate Tables: Thematic and Methodological Divisions in Brazilian Political Science",
@@ -125,23 +136,48 @@ elif selected == "Produção Acadêmica":
             "link": "https://www.scielo.br/j/bpsr/a/56fP9Qpfs7Vjf7JHKt5mP8j/?lang=en"
         },
         {
-            "title": "Artigo ABC",
-            "publication": "Periódico Y",
-            "authors": "Autor 1, Autor 2, Autor 3",
-            "link": "https://link-do-artigo-2.com"
+            "title": "O poder dos 'Cabeças do Congresso': A ambição política e as chances eleitorais dos premiados do DIAP",
+            "publication": "Revista eletrônica do Programa de Pós-Graduação da Câmara dos Deputados",
+            "authors": "Nilton Sainz, Adriano Codato, Gabryela Gabriel e Victor Miranda",
+            "link": "https://doi.org/10.51206/elegis.v15i37.749"
         },
         {
-            "title": "Artigo DEF",
-            "publication": "Periódico Z",
-            "authors": "Autor A, Autor B, Autor C",
-            "link": "https://link-do-artigo-3.com"
-        }
+            "title": "Além do 'estado da arte': uma revisão cientometrica sobre judicialização da política na América Latina",
+            "publication": "Teoria Jurídica Contemporânea",
+            "authors": "Rafael Viegas, Nilton Sainz, Rayane Vieira",
+            "link": "https://revistas.ufrj.br/index.php/rjur/article/view/55663"
+        },
+         {
+            "title": "Entre a apuração e o negacionismo: a percepção dos(as) deputados(as) federais da 53° e 54° legislaturas sobre a implementação da Lei da Comissão Nacional da Verdade no Brasil",
+            "publication": "Revista Eletrônica Direito e Política",
+            "authors": "Nilton Sainz, Rafael Alexandre Silveira e Carlos Arthur Gallo",
+            "link": "https://periodicos.univali.br/index.php/rdp/article/view/16390/9280"
+        },
+        {
+            "title": "Antagonismos discursivos nas hashtags #marqueteirosdojair e #bolsolão no Twitter nas eleições de 2018 no Brasil: contribuições da análise de redes sociais à sociologia digital",
+            "publication": "Estudos de Sociologia",
+            "authors": "Otávio Vinhas, Nilton Sainz e Raquel Recuero",
+            "link": "https://periodicos.fclar.unesp.br/estudos/article/view/13433"
+        },
+        {
+            "title": "Um município 'Diárquico'? A atuação dos partidos políticos políticos no Legislativo de Rio Grande - RS no final da ditadura civil-militar",
+            "publication": "Teoria e Pesquisa (UFSCAR)",
+            "authors": "Nilton Sainz, Rafael Alexandre Silveira e Carlos Arthur Gallo",
+            "link": "https://www.teoriaepesquisa.ufscar.br/index.php/tp/article/view/757"
+        },
+        {
+            "title": "O que as páginas dos partidos dizem sobre eles? Análise de redes das páginas oficiais dos partidos políticos brasileiros no facebook",
+            "publication": "Debates (UFRGS)",
+            "authors": "Nilton Sainz e Raquel Recuero",
+            "link": "https://doi.org/10.22456/1982-5269.95553"
+        },
     ]
     for item in production:
-        st.markdown(f"### {item['title']}")
-        st.markdown(f"*{item['publication']}*")
-        st.markdown(f"**Autores:** {item['authors']}")
-        st.markdown(f"[Acesse a publicação]({item['link']})", unsafe_allow_html=True)
+        st.markdown(f"<h3 class='publication-title'>{item['title']}</h3>", unsafe_allow_html=True)
+        st.markdown(f"<p class='publication-details'><em>{item['publication']}</em></p>", unsafe_allow_html=True)
+        st.markdown(f"<p class='publication-details'><strong>Autores:</strong> {item['authors']}</p>", unsafe_allow_html=True)
+        st.markdown(f"<a class='publication-details' href='{item['link']}' target='_blank'>Acesse a publicação</a>", unsafe_allow_html=True)
+
 
 elif selected == "Contato":
     st.write("Entre em contato comigo através das plataformas abaixo:")
