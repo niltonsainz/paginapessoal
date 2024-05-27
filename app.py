@@ -55,10 +55,10 @@ selected = option_menu(
     default_index=0,  # Índice padrão
     orientation="horizontal",
     styles={
-        "container": {"padding": "0!important", "background-color": "white"},
+        "container": {"padding": "0!important", "background-color": "black"},
         "icon": {"color": "white", "font-size": "25px"},
         "nav-link": {"font-size": "20px", "text-align": "center", "margin": "0px", "--hover-color": "#EEEEEE"},
-        "nav-link-selected": {"background-color": "#EEEEEE"},
+        "nav-link-selected": {"background-color": "#333"},
     }
 )
 
@@ -121,22 +121,27 @@ elif selected == "Produção Acadêmica":
         {
             "title": "Separate Tables: Thematic and Methodological Divisions in Brazilian Political Science",
             "publication": "Brazilian Political Science Review",
-            "Authors": "Nilton Sainz, Adriano Codato, Rodrigo da Silva e Augusto Clemente",
+            "authors": "Nilton Sainz, Adriano Codato, Rodrigo da Silva e Augusto Clemente",
             "link": "https://www.scielo.br/j/bpsr/a/56fP9Qpfs7Vjf7JHKt5mP8j/?lang=en"
         },
         {
             "title": "Artigo ABC",
-            "publication": "publicado no periódico Y",
+            "publication": "Periódico Y",
+            "authors": "Autor 1, Autor 2, Autor 3",
             "link": "https://link-do-artigo-2.com"
         },
         {
             "title": "Artigo DEF",
-            "publication": "publicado no periódico Z",
+            "publication": "Periódico Z",
+            "authors": "Autor A, Autor B, Autor C",
             "link": "https://link-do-artigo-3.com"
         }
     ]
     for item in production:
-        st.markdown(f"[{item['title']}, {item['publication']}]({item['link']})")
+        st.markdown(f"### {item['title']}")
+        st.markdown(f"*{item['publication']}*")
+        st.markdown(f"**Autores:** {item['authors']}")
+        st.markdown(f"[Acesse a publicação]({item['link']})", unsafe_allow_html=True)
 
 elif selected == "Contato":
     st.write("Entre em contato comigo através das plataformas abaixo:")
