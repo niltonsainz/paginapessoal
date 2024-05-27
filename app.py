@@ -48,7 +48,7 @@ st.markdown(
             <div class="subtitle">Cientista Político</div>
             <div class="university">Universidade Federal do Paraná</div>
         </div>
-        <img src="image.png" alt="Foto de Nilton Sainz">
+        <img src="Foto_NiltonSainz.png">
     </div>
     ''',
     unsafe_allow_html=True
