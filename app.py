@@ -276,7 +276,7 @@ elif selected == "Habilidades técnicas":
         """)
 
     with col3:
-        st.markdown("<div style='color: white; font-size: 20px; font-weight: bold;'>Softwares e bibliotecas</div>", unsafe_allow_html=True)
+        st.markdown("<div style='color: white; font-size: 20px; font-weight: bold;'>Softwares e linguagens de programação</div>", unsafe_allow_html=True)
         st.write("""
         - R e RStudio
         - Python e VSCode
