@@ -144,7 +144,7 @@ if selected == "Apresentação":
     e ao Núcleo de Pesquisa em Políticas Públicas e Desenvolvimento Humano da PUCPR [(NUPED)](https://www.nuped.com.br/).
     
     Meus interesses de pesquisa são elites parlamentares, carreiras políticas, eleições e poder Legislativo 
-    e metodologia de pesquisa em Ciência Política e Sociais. Também possuo interesse nas áreas de regulação de novas técnicas
+    e metodologia de pesquisa em Ciência Política e Sociais. Também possuo interesse nas áreas de regulação de novas tecnologias
     e transformação da administração pública digital.
 
     Atuo como pesquisador e analista de dados no Observatório do Controle, onde atualmente estou como Diretor de pesquisa. Também presto
