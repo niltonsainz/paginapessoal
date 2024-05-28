@@ -11,6 +11,50 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Função para converter uma imagem local em uma URL base64
+def get_image_base64(image_path):
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
+
+# Carregar a imagem de fundo
+background_image = get_image_base64("image_bg.png")
+
+# Define a imagem de fundo usando CSS
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background: url(data:image/png;base64,{background_image}) no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+    }}
+    .css-1d391kg {{
+        background: rgba(0, 0, 0, 0) !important;
+    }}
+    .css-164nlkn {{
+        background: rgba(0, 0, 0, 0) !important;
+    }}
+    .css-1hynsf2 {{
+        background: rgba(0, 0, 0, 0) !important;
+    }}
+    .css-1v3fvcr {{
+        background: transparent !important;  /* Transparente para a barra */
+        color: white !important;  /* Letras e ícones em branco */
+    }}
+    .css-1v3fvcr a {{
+        color: white !important;  /* Links em branco */
+    }}
+    .st-ef {{
+        background: transparent !important; /* Transparente para o conteúdo */
+    }}
+    .block-container {{
+        background: transparent !important; /* Transparente para o container de blocos */
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Define a cor de fundo preta e letras brancas usando CSS
 st.markdown(
     """
@@ -109,17 +153,12 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Função para converter uma imagem local em uma URL base64
-def get_image_base64(image_path):
-    with open(image_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode()
-
 # Exibir a imagem ao lado das informações
 col1, col2 = st.columns([2, 1])
 with col1:
     st.markdown('<div class="text"><div class="title">Nilton Sainz</div><div class="subtitle">Cientista Político</div><div class="university">Universidade Federal do Paraná</div></div>', unsafe_allow_html=True)
 with col2:
-    st.image("image.png", width=400)  # Ajustar caminho da imagem
+    st.image("image.png", width=400)  # Ajustar caminho da imagem e largura
 
 # Barra de navegação com opções
 selected = option_menu(
@@ -132,8 +171,8 @@ selected = option_menu(
     styles={
         "container": {"padding": "0!important", "background-color": "black"},
         "icon": {"color": "white", "font-size": "25px"},
-        "nav-link": {"font-size": "20px", "text-align": "center", "margin": "0px", "--hover-color": "#333", "color": "white"},
-        "nav-link-selected": {"background-color": "#444", "color": "white"},
+        "nav-link": {"font-size": "20px", "text-align": "center", "margin": "0px", "--hover-color": "rgba(255, 255, 255, 0.1)", "color": "white"},
+        "nav-link-selected": {"background-color": "rgba(0, 0, 0, 0.7)", "color": "white"},
     }
 )
 
