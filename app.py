@@ -1,5 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+import streamlit.components.v1 as components
+import base64
 
 # Inclui a folha de estilo do FontAwesome
 st.markdown(
@@ -89,30 +91,35 @@ st.markdown(
         font-size: 18px;
     }
     .skills-list li {
-        margin-bottom: 8px;
+        margin-bottom: 8px.
     }
     .logos-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 20px.
     }
     .logos-container img {
         margin: 0 20px;
         width: 100px;
-        height: auto;
+        height: auto.
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
+# Função para converter uma imagem local em uma URL base64
+def get_image_base64(image_path):
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
+
 # Exibir a imagem ao lado das informações
 col1, col2 = st.columns([2, 1])
 with col1:
     st.markdown('<div class="text"><div class="title">Nilton Sainz</div><div class="subtitle">Cientista Político</div><div class="university">Universidade Federal do Paraná</div></div>', unsafe_allow_html=True)
 with col2:
-    st.image("image.png", width=400)  # Corrigir para usar st.image
+    st.image("image.png", width=400)  # Ajustar caminho da imagem
 
 # Barra de navegação com opções
 selected = option_menu(
@@ -131,6 +138,50 @@ selected = option_menu(
 )
 
 if selected == "Apresentação":
+    # Convertendo imagens locais em base64 URLs
+    img1 = get_image_base64("image2.jpg")
+    img2 = get_image_base64("image3.jpeg")
+    img3 = get_image_base64("image4.jpeg")
+    img4 = get_image_base64("image5.jpeg")
+
+    # HTML para o carrossel de imagens com alturas personalizadas
+    carrossel_html = f"""
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="data:image/jpg;base64,{img1}" alt="First slide" style="object-fit: cover; height: 500px;">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="data:image/jpeg;base64,{img2}" alt="Second slide" style="object-fit: cover; height: 500px;">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="data:image/jpeg;base64,{img3}" alt="Third slide" style="object-fit: cover; height: 500px;">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="data:image/jpeg;base64,{img4}" alt="Fourth slide" style="object-fit: cover; height: 500px;">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    """
+
     st.markdown("""
     Me chamo Nilton Garcia Sainz, tenho 27 anos, nascido em Rio Grande, no extremo sul do Rio Grande do Sul.
 
@@ -150,6 +201,9 @@ if selected == "Apresentação":
     Atuo como pesquisador e analista de dados no Observatório do Controle, onde atualmente estou como Diretor de pesquisa. Também presto
     assessoria e consultoria em pesquisas científicas.
     """)
+
+    components.html(carrossel_html, height=500)
+
 elif selected == "Projetos":
     st.markdown("""
     <style>
